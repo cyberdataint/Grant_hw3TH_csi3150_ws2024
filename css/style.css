@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Setup */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: #111111;
+
+  font-family: "Montserrat", sans-serif;
+  color: #f4f4f4;
+  font-size: 18px;
+}
+input, textarea {
+  border: 1.5px solid #f4f4f4;
+  outline: none;
+  padding: 12px;
+  background: #222222;
+  transition: all 0.2s ease-in-out;
+  color: #f4f4f4;
+  font-size: 16px;
+  font-family: "Lato", sans-serif;
+}
+input::placeholder, textarea::placeholder {
+  color: rgba(244, 244, 244, 0.6);
+}
+input:focus, textarea:focus {
+  border: 1.5px solid #f8b400;
+}
+
+.button {
+  width: 220px;
+  height: 52px;
+  background: #f8b400;
+  color: #ffffff;
+  font-family: "Crimson Text", serif;
+  font-size: 24px;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease-in-out;
+}
+.button:hover {
+  background: #f3a000;
+}
+
+/* Font */
+.big {
+  font-size: 154px;
+  font-family: "Crimson Text", serif;
+}
+.call {
+  font-size: 90px;
+  font-family: "Crimson Text", serif;
+}
+.title {
+  font-size: 50px;
+  font-family: "Crimson Text", serif;
+}
+.section-heading {
+  font-size: 32px;
+  font-family: "Crimson Text", serif;
+}
+.subtitle {
+  font-size: 26px;
+  text-transform: uppercase;
+}
+.big, .call, .title {
+  word-break: break-word;
+  width: fit-content;
+}
+
+.yellow {
+  color: #f8b400;
+}
+
+/* Flexbox */
+.flex {
+  display: flex;
+}
+.justify-center {
+  justify-content: center;
+}
+.align-start {
+  align-items: flex-start;
+}
+.align-center {
+  align-items: center;
+}
+.wrap {
+  flex-wrap: wrap;
+}
+.flex-col {
+  flex-direction: column;
+}
+.gap-8 {
+  gap: 8px;
+}
+.gap-16 {
+  gap: 16px;
+}
+.gap-32 {
+  gap: 32px;
+}
+.gap-64 {
+  gap: 64px;
+}
+.gap-92 {
+  gap: 92px;
+}
+
+/* Sections */
+.section {
+  position: relative;
+}
+.section > .bg-image {
+  opacity: 0.45;
+}
+.bg-image {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  object-fit: cover;
+  z-index: -2;
+}
+.section-half {
+  flex: 1;
+  max-width: 780px;
+  flex-basis: 400px;
+  padding: 60px;
+}
+.section-full {
+  height: 100vh;
+}
+.section-1 {
+  min-height: 55vh;
+}
+.section.flex-col {
+  padding: 60px;
+}
+
+/* Animation */
+@keyframes float {
+  0% {
+    transform: translate(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+.section:first-child > .fa-chevron-down {
+  animation: float 2.5s infinite;
+}
+
+.locations {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 100%;
+}
+
+.location {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: end;
+  gap: 20px;
+  max-width: 450px;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1.5;
+  position: relative;
+}
+.location-content {
+  padding: 1.2em;
+}
+.location > .bg-image {
+  z-index: -1;
+}
+.location-content > .fa-chevron-down {
+  font-size: 64px;
+  color: #f8b400;
+}
+
+.stat-circle {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  background: #111111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 1em;
+}
+.stat-circle > p:first-child {
+  font-size: 90px;
+  font-family: "Crimson Text", serif;
+  color: #f8b400;
+}
+.stat-circle > p:last-child {
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
+.profile-picture {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  background-image: url('../img/profile.png');
+  background-size: cover;
+}
+
+.fa-chevron-down {
+  font-size: 80px;
+  color: #f8b400;
+}
+
+.icons > i {
+  font-size: 32px;
+  color: #f8b400;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.icons > i:hover {
+  transform: scale(1.15);
+}
+
+/* Carousel */
+.carousel-section {
+  position: relative;
+}
+.carousel-section > .fa-solid {
+  position: absolute;
+  top: 50%;
+  font-size: 60px;
+  color: #f8b400;
+  cursor: pointer;
+}
+.carousel-section > .fa-chevron-left {
+  left: 16px;
+}
+.carousel-section > .fa-chevron-right {
+  right: 16px;
+}
+.carousel-image {
+  flex: 1;
+}
+.carousel-image > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.75;
+}
